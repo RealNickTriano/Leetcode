@@ -5,12 +5,13 @@ class Solution:
         # skip non-alphanumerics
         p1 = 0
         p2 = len(s) - 1
+        slower = s.lower()
         while p1 < p2:
             if not str.isalnum(s[p1]):
                 p1 += 1
             elif not str.isalnum(s[p2]):
                 p2 -= 1
-            elif s[p1].lower() != s[p2].lower():
+            elif slower[p1] != slower[p2]:
                 return False
             else:
                 p1 += 1
