@@ -5,7 +5,8 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
         l, r = 0, len(nums) - 1
         while l <= r:
-            middle = r + l // 2
+            middle = (r + l) // 2
+            print(nums[l: r+1], middle)
             if nums[middle] > target:
                 r = middle - 1
             elif nums[middle] < target:
